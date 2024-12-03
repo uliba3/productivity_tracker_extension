@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Summary</title>
+  <link rel="stylesheet" href="time_summary.css">
+  <script src="../lib/chart.js"></script>
+</head>
+<body>
+  <div class="summary-container">
+    <div class="date-toggle-container">
+      <h1>Productivity Summary</h1>
+      <input type="date" id="datePicker" class="modern-date-picker">
+      <div class="toggle-container">
+        <span class="toggle-label">Minutes</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="displayToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">%</span>
+      </div>
+    </div>
+    <table id="timeTable"></table>
+    <div class="chart-summary-container">
+      <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+        <canvas id="barChart"></canvas>
+      </div>
+      <textarea id="summaryTextArea" readonly></textarea>
+    </div>
+  </div>
+  <script type="module" src="time_summary.js"></script>
+</body>
+</html> 

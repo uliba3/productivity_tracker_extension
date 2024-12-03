@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productivity Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="../lib/chart.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Productivity Tracker</h1>
+    <canvas id="pieChart"></canvas>
+    <div class="button-container">
+      <button id="summaryButton">Summary</button>
+      <!--<button id="clearButton">Clear</button>-->
+      <!--<button id="testButton">Test Data</button>-->
+      <div class="toggle-container tooltip">
+        <label class="toggle-switch">
+          <input type="checkbox" id="displayToggle">
+          <span class="slider"></span>
+          <span class="tooltiptext">Notifies when you are not productive</span>
+        </label>
+        <span class="toggle-label">productive mode</span>
+      </div>
+    </div>
+    <!--<pre id="pageHTML"></pre>-->
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html> 

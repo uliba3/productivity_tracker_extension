@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Activity Tracker",
+  "version": "1.0",
+  "description": "Track your activity on the web",
+  "permissions": ["tabs", "storage", "alarms", "notifications"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pageInfo_service.js",
+        "gemini_nano.js",
+        "storage.js",
+        "pages/time_summary.js",
+        "pages/time_summary.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["contentScript.js"],
+    "css": ["warning.css"]
+  }]
+}

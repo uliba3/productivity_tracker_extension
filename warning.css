@@ -1,0 +1,62 @@
+.productivity-warning {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: red;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+.warning-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.warning-icon {
+    font-size: 24px;
+}
+
+.close-warning {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.warning-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.whitelist-btn {
+    background: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.whitelist-btn:hover {
+    background: #f5f5f5;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
